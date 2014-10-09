@@ -33,4 +33,12 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>gm_Favorite_Color__c</fullName>
+        <externalId>false</externalId>
+        <label>Favorite Color</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
 </CustomObject>
