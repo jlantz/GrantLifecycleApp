@@ -119,6 +119,7 @@
     <members>Contact.gm_Department_Reference__c</members>
     <members>Contact.gm_Department__c</members>
     <members>Contact.gm_Related_User_Record__c</members>
+    <members>Contact.gm_Favorite_Color__c</members>
     <members>Deliverable__c.Departments__c</members>
     <members>Deliverable__c.Description__c</members>
     <members>Deliverable__c.Due_Date__c</members>
@@ -407,6 +408,10 @@
     <members>Grant_Lifecycle/Press_Clips_TV</members>
     <members>Grant_Lifecycle/Projects_Ending_in_Next_3_Months</members>
     <name>Report</name>
+  </types>
+  <types>
+    <members>Grant_Management_with_Grant_Reporting_with_Grant_Reports</members>
+    <name>ReportType</name>
   </types>
   <types>
     <members>ADLData811</members>
