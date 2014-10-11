@@ -5,14 +5,16 @@ BASEDIR=`pwd`
 # Checkout the CumulusCI repository
 if [ -d ../CumulusCI ]; then
     cd ../CumulusCI
-    git fetch --all
-    git checkout feature/13-codeship-integration
+    # Uncomment and edit if you need a specific branch of CumulusCI
+    #git fetch --all
+    #git checkout feature/13-codeship-integration
     git pull
 else
     git clone https://github.com/SalesforceFoundation/CumulusCI ../CumulusCI
     cd ../CumulusCI
-    git fetch --all
-    git checkout feature/13-codeship-integration
+    # Uncomment and edit if you need a specific branch of CumulusCI
+    #git fetch --all
+    #git checkout feature/13-codeship-integration
 fi
 
 # Run the codeship.sh from CumulusCI from BASEDIR
