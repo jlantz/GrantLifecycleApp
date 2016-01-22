@@ -491,11 +491,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Grant_Reporting_Requirement__c.Grant_Management__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Grant_Reporting_Requirement__c.Grant_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
