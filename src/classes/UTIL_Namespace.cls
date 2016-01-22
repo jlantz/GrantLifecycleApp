@@ -44,7 +44,7 @@ public without sharing class UTIL_Namespace {
         get {
             if (!fCheckedForManagedPackage) {
                 // first try to look up an object using pkg namespace - this should only work in an installed (i.e. client) instance
-                Schema.SObjectType token = Schema.getGlobalDescribe().get('npsprep_df14_1__Grant_Reporting_Requirement__c');
+                Schema.SObjectType token = Schema.getGlobalDescribe().get('fakegla1__Grant_Reporting_Requirement__c');
                 if (token != null) {                
                     InManagedPackage = true;
                     fCheckedForManagedPackage = true;
@@ -52,7 +52,7 @@ public without sharing class UTIL_Namespace {
                     // if this doesn't work, we are either in the package instance itself, or in an unmanaged developer instance (git clone)
                     // the former still needs to include the prefixes, while the latter needs to not include them
                     // in order to tell the difference, try a dynamic query w/ the prefix and see if we get an err
-                    string soql = 'SELECT Id FROM npsprep_df14_1__Grant_Reporting_Requirement__c LIMIT 1';
+                    string soql = 'SELECT Id FROM fakegla1__Grant_Reporting_Requirement__c LIMIT 1';
                     try {
                         SObject[] recs = database.query(soql); 
                     } catch (exception e) {
@@ -84,7 +84,7 @@ public without sharing class UTIL_Namespace {
     ********************************************************************************************************/
     public static string StrTokenNSPrefix(string str) {
         if (!InManagedPackage) return str;
-        str = 'npsprep_df14_1__' + str;
+        str = 'fakeGLA__' + str;
         return str;
     }
     
@@ -97,7 +97,7 @@ public without sharing class UTIL_Namespace {
     * @return token name, with namespace prefix removed, if present.
     ********************************************************************************************************/
     public static string StrTokenRemoveNSPrefix(string str) {
-        return str.replace('npsprep_df14_1__', '');
+        return str.replace('fakegla1__', '');
     }
       
     // If we ever need to only namespace strings ending in __c, the method below should work
@@ -121,7 +121,7 @@ public without sharing class UTIL_Namespace {
         if (!InManagedPackage) return str;
         Pattern pat = Pattern.Compile('[a-zA-z0-9]*__c');
         Matcher match = pat.matcher(str);
-        return match.replaceAll('npsprep_df14_1__$0');
+        return match.replaceAll('fakegla1__$0');
     }
     
     /*******************************************************************************************************

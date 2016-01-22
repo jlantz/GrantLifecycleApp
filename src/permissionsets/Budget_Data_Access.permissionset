@@ -111,11 +111,6 @@
     <description>This setting will override Project Level access to Budget Data.</description>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Accounting_Category__c.Category_Code__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Accounting_Category__c.Display_Order__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -331,16 +326,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Grant_Deliverable__c.Deliverable__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Grant_Deliverable__c.Grant_Management__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Grant_Management__c.Amount_of_Grant_Awarded__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -541,11 +526,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Impact__c.Deliverable__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Impact__c.Impact_Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -692,16 +672,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity_Code__c.Amount_Allocated__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Opportunity_Code__c.Opportunity__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Opportunity_Code__c.Project__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -942,11 +912,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Staff_Participation__c.Budget_approver__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Staff_Participation__c.Contact__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
