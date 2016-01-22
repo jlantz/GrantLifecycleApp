@@ -84,7 +84,7 @@ public without sharing class UTIL_Namespace {
     ********************************************************************************************************/
     public static string StrTokenNSPrefix(string str) {
         if (!InManagedPackage) return str;
-        str = 'fakeGLA__' + str;
+        str = 'fakegla1__' + str;
         return str;
     }
     
