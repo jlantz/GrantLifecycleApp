@@ -116,11 +116,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Accounting_Code__c.Accounting_Category__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Accounting_Code__c.Include_on_Budget_Report__c</field>
         <readable>false</readable>
     </fieldPermissions>
