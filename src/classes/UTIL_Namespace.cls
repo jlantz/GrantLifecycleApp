@@ -45,7 +45,6 @@ public without sharing class UTIL_Namespace {
             if (!fCheckedForManagedPackage) {
                 // first try to look up an object using pkg namespace - this should only work in an installed (i.e. client) instance
                 Schema.SObjectType token = Schema.getGlobalDescribe().get('fakegla1__Grant_Reporting_Requirement__c');
-                Schema.SObjectType token = Schema.getGlobalDescribe().get('fakeGLA__Grant_Reporting_Requirement__c');
                 if (token != null) {                
                     InManagedPackage = true;
                     fCheckedForManagedPackage = true;
@@ -54,7 +53,6 @@ public without sharing class UTIL_Namespace {
                     // the former still needs to include the prefixes, while the latter needs to not include them
                     // in order to tell the difference, try a dynamic query w/ the prefix and see if we get an err
                     string soql = 'SELECT Id FROM fakegla1__Grant_Reporting_Requirement__c LIMIT 1';
-                    string soql = 'SELECT Id FROM fakeGLA__Grant_Reporting_Requirement__c LIMIT 1';
                     try {
                         SObject[] recs = database.query(soql); 
                     } catch (exception e) {
