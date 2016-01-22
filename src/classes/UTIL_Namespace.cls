@@ -44,7 +44,11 @@ public without sharing class UTIL_Namespace {
         get {
             if (!fCheckedForManagedPackage) {
                 // first try to look up an object using pkg namespace - this should only work in an installed (i.e. client) instance
+<<<<<<< HEAD
                 Schema.SObjectType token = Schema.getGlobalDescribe().get('fakegla1__Grant_Reporting_Requirement__c');
+=======
+                Schema.SObjectType token = Schema.getGlobalDescribe().get('fakeGLA__Grant_Reporting_Requirement__c');
+>>>>>>> 7906b185fc42786c9f213e3c1797a6bad50e09ac
                 if (token != null) {                
                     InManagedPackage = true;
                     fCheckedForManagedPackage = true;
@@ -52,7 +56,11 @@ public without sharing class UTIL_Namespace {
                     // if this doesn't work, we are either in the package instance itself, or in an unmanaged developer instance (git clone)
                     // the former still needs to include the prefixes, while the latter needs to not include them
                     // in order to tell the difference, try a dynamic query w/ the prefix and see if we get an err
+<<<<<<< HEAD
                     string soql = 'SELECT Id FROM fakegla1__Grant_Reporting_Requirement__c LIMIT 1';
+=======
+                    string soql = 'SELECT Id FROM fakeGLA__Grant_Reporting_Requirement__c LIMIT 1';
+>>>>>>> 7906b185fc42786c9f213e3c1797a6bad50e09ac
                     try {
                         SObject[] recs = database.query(soql); 
                     } catch (exception e) {
