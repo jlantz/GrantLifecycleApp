@@ -84,7 +84,7 @@ public without sharing class UTIL_Namespace {
     ********************************************************************************************************/
     public static string StrTokenNSPrefix(string str) {
         if (!InManagedPackage) return str;
-        str = 'npsprep_df14_1__' + str;
+        str = 'fakeGLA__' + str;
         return str;
     }
     
@@ -97,7 +97,7 @@ public without sharing class UTIL_Namespace {
     * @return token name, with namespace prefix removed, if present.
     ********************************************************************************************************/
     public static string StrTokenRemoveNSPrefix(string str) {
-        return str.replace('npsprep_df14_1__', '');
+        return str.replace('fakeGLA__', '');
     }
       
     // If we ever need to only namespace strings ending in __c, the method below should work
@@ -121,7 +121,7 @@ public without sharing class UTIL_Namespace {
         if (!InManagedPackage) return str;
         Pattern pat = Pattern.Compile('[a-zA-z0-9]*__c');
         Matcher match = pat.matcher(str);
-        return match.replaceAll('npsprep_df14_1__$0');
+        return match.replaceAll('fakeGLA__$0');
     }
     
     /*******************************************************************************************************
