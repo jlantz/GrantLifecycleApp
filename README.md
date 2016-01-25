@@ -1,3 +1,8 @@
+Testing CumulusCIJenkins
+=================
+This repo is being used as a test of building this project through CumulusCIJenkins
+* test 2
+
 Grant Lifecycle Application
 =================
 

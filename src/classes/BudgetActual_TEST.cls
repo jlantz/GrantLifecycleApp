@@ -65,7 +65,7 @@ private class BudgetActual_TEST {
     PageReference pageRef = Page.BudgetvsActual;
     Test.setCurrentPage(pageRef);
     BudgetActualController bfc = new BudgetActualController(new ApexPages.StandardController(testProject)); 
-    system.assertequals('/apex/' + UTIL_Namespace.StrTokenNSPrefix('bvapermissioncheck'), bfc.confirmaccess().geturl());
+    system.assertequals('/apex/' + UTIL_Namespace.StrTokenNSPrefix('bvapermissioncheck').toLowerCase(), bfc.confirmaccess().geturl().toLowerCase());
     system.assertequals(FALSE, bfc.bUserHasAccess);
     }
     
