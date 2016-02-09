@@ -51,8 +51,6 @@ profiles:
     tests:
       - 'cumulusci managed_deploy'
 
-tests:
-
 collect:
   repo:
     - test_results.json
