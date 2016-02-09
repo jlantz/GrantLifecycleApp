@@ -45,12 +45,13 @@ profiles:
 
   package_beta:
     tests:
-      - 'cumulusci package_beta'
+      - type: custom
+        command: cumulusci package_beta $SOLANO_CURRENT_COMMIT
 
   deploy_beta:
     environment:
-      SF_USERNAME = $SF_USERNAME_BETA
-      SF_PASSWORD = $SF_PASSWORD_BETA
+      SF_USERNAME: $SF_USERNAME_BETA
+      SF_PASSWORD: $SF_PASSWORD_BETA
     tests:
       - 'cumulusci managed_deploy --run-tests --version {{ version }}'
 
