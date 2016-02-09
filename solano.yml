@@ -46,7 +46,7 @@ profiles:
   package_beta:
     tests:
       - type: custom
-        command: cumulusci package_beta $SOLANO_CURRENT_COMMIT
+        command: cumulusci package_beta $TDDIUM_CURRENT_COMMIT
 
   deploy_beta:
     environment:
