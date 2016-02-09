@@ -121,11 +121,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Accounting_Code__c.Accounting_Category__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Accounting_Code__c.Include_on_Budget_Report__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -301,11 +296,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Deliverable__c.Project__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Deliverable__c.URL__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -327,16 +317,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Department__c.Roll_Up_Department__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Grant_Deliverable__c.Deliverable__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Grant_Deliverable__c.Grant_Management__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -456,11 +436,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Grant_Report_Detail__c.Grant_Reporting__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Grant_Report_Detail__c.Link_to_Report__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -516,11 +491,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Grant_Reporting_Requirement__c.Grant_Management__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Grant_Reporting_Requirement__c.Grant_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -537,11 +507,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Grant_Reporting_Requirement__c.Status__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Impact__c.Deliverable__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -692,16 +657,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity_Code__c.Amount_Allocated__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Opportunity_Code__c.Opportunity__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Opportunity_Code__c.Project__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -942,11 +897,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Staff_Participation__c.Budget_approver__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Staff_Participation__c.Contact__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
