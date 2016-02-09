@@ -33,9 +33,7 @@ plan:
   - profile: build_router
     sets: next_profile
   - profile: "{{ next_profile }}"
-    sets: 
-      - next_profile
-      - version
+    sets: next_profile
 
 profiles:
   build_router:
