@@ -20,22 +20,38 @@ hooks:
     cd ..
     mkdir apex_debug_logs
 
+  post_build: "cumulusci ci next_steps"
+
 environment:
   CUMULUSCI_PATH: CumulusCI
-  TEST_MODE: parallel
   DEBUG_TESTS: true
-  DEBUG_LOGDIR: apex_debug_logs
-  TEST_JSON_OUTPUT: test_results.json
-  TEST_JUNIT_OUTPUT: test_results_junit.xml
 
 test_pattern: 
   - 'none'
 
+plan:
+  - build_router
+
+profiles:
+  build_router:
+    tests:
+      - type: junit
+        command: cumulusci ci build_router
+        report_files:
+        - "test_results_junit.xml"
+
+  package_beta:
+    tests:
+      - 'cumulusci package_beta'
+
+  deploy_beta:
+    environment:
+      SF_USERNAME = $SF_USERNAME_BETA
+      SF_PASSWORD = $SF_PASSWORD_BETA
+    tests:
+      - 'cumulusci managed_deploy'
+
 tests:
-  - type: junit
-    command: cumulusci ci build_router
-    report_files:
-    - "test_results_junit.xml"
 
 collect:
   repo:

@@ -3,3 +3,5 @@
 build.properties
 salesforce.schema
 Referenced Packages
+.solano*
+solano-plan-variables.json
