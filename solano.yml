@@ -5,7 +5,7 @@ python:
 system:
   queue:
     - branch: master
-      queue: master
+      queue: default
     - branch: "feature/*"
       queue: feature
 
@@ -25,41 +25,38 @@ hooks:
 environment:
   CUMULUSCI_PATH: CumulusCI
   DEBUG_TESTS: true
+  CUMULUSCI_STEPS_FEATURE: ['deploy',]
+  CUMULUSCI_STEPS_MASTER: ['deploy','package_beta','deploy_beta']
 
 test_pattern: 
   - 'none'
 
 plan:
-  - profile: build_router
+  - profile: deploy
     sets: next_profile
   - profile: "{{ next_profile }}"
     sets: next_profile
   - profile: "{{ next_profile }}"
-    sets: next_profile
-  - profile: "{{ next_profile }}"
-    sets: next_profile
 
 profiles:
-  build_router:
+  deploy:
     tests:
       - type: junit
-        command: cumulusci ci build_router
+        command: cumulusci ci deploy
         report_files:
         - "test_results_junit.xml"
 
   package_beta:
     tests:
       - type: custom
-        command: cumulusci package_beta $TDDIUM_CURRENT_COMMIT
+        command: cumulusci package_beta $TDDIUM_CURRENT_COMMIT --create-release
 
-  deploy_beta:
-    environment:
-      SF_USERNAME: $SF_USERNAME_BETA
-      SF_PASSWORD: $SF_PASSWORD_BETA
+  beta_deploy:
     tests:
-      - 'cumulusci managed_deploy --run-tests --version {{ version }}'
+      - "git fetch --all; cumulusci ci beta_deploy `git describe --tags | grep 'beta\/' | tail -1` $TDDIUM_CURRENT_COMMIT --run-tests"
 
 collect:
   repo:
+    - package.properties
     - test_results.json
     - test_results_junit.xml
