@@ -53,7 +53,7 @@ profiles:
 
   beta_deploy:
     tests:
-      - "git fetch --all; cumulusci ci beta_deploy `git describe --tags | grep 'beta\/' | tail -1` $TDDIUM_CURRENT_COMMIT --run-tests"
+      - git fetch --all; cumulusci ci beta_deploy "`git describe --tags | grep 'beta\/' | tail -1`" "$TDDIUM_CURRENT_COMMIT" --run-tests
 
 collect:
   repo:
