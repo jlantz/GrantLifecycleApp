@@ -33,13 +33,12 @@ test_pattern:
 
 plan:
   - profile: deploy
-    sets: next_profile
-  - profile: "{{ next_profile }}"
-    sets: next_profile
-  - profile: "{{ next_profile }}"
-    sets: next_profile
-  - profile: "{{ next_profile }}"
-    sets: next_profile
+    sets: next_profile0
+  - profile: "{{ next_profile0 }}"
+    sets: next_profile1
+  - profile: "{{ next_profile1 }}"
+    sets: next_profile2
+  - profile: "{{ next_profile2 }}"
 
 profiles:
   deploy:
