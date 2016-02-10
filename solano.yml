@@ -37,6 +37,7 @@ plan:
   - profile: "{{ next_profile }}"
     sets: next_profile
   - profile: "{{ next_profile }}"
+    sets: next_profile
 
 profiles:
   deploy:
