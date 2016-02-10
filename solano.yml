@@ -20,7 +20,7 @@ hooks:
     cd ..
     mkdir apex_debug_logs
 
-  post_build: "cumulusci ci next_step"
+  post_build: "cumulusci ci next_step; cat solano-plan-variables.json"
 
 environment:
   CUMULUSCI_PATH: CumulusCI
