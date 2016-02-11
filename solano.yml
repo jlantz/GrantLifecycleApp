@@ -53,8 +53,14 @@ profiles:
 
   beta_deploy:
     tests:
-      - type: custom
-        command: git fetch --all; cumulusci ci beta_deploy "`git describe --tags | grep 'beta\/' | tail -1`" "$TDDIUM_CURRENT_COMMIT" --run-tests
+      - type: junit
+        command: export ORG_SUFFIX=beta; git fetch --all; cumulusci ci beta_deploy "`git describe --tags | grep 'beta\/' | tail -1`" "$TDDIUM_CURRENT_COMMIT" --run-tests
+        report_files:
+        - "test_results_junit.xml"
+      - type: junit
+        command: export ORG_SUFFIX=beta_2; git fetch --all; cumulusci ci beta_deploy "`git describe --tags | grep 'beta\/' | tail -1`" "$TDDIUM_CURRENT_COMMIT" --run-tests
+        report_files:
+        - "test_results_junit.xml"
 
   dummy1:
     tests:
