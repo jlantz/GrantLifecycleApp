@@ -49,7 +49,7 @@ profiles:
   package_beta:
     tests:
       - type: custom
-        command: cumulusci package_beta $TDDIUM_CURRENT_COMMIT --create-release
+        command: echo $TDDIUM_CURRENT_COMMIT; cumulusci package_beta $TDDIUM_CURRENT_COMMIT --create-release
 
   beta_deploy:
     tests:
