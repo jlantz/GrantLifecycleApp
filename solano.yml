@@ -20,7 +20,9 @@ hooks:
     cd ..
     mkdir apex_debug_logs
 
-  post_build: "cumulusci ci next_step; cat solano-plan-variables.json"
+  post_build: |
+  cumulusci ci next_step
+  echo '{"plan_step_2": "package_beta", "plan_step_3": "deploy_beta"}' > solano-plan-variables.json 
 
 environment:
   CUMULUSCI_PATH: CumulusCI
